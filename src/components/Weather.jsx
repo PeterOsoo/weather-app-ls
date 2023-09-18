@@ -26,7 +26,7 @@ const Weather = () => {
 			<h1>Weather App</h1>
 			<input
 				type="text"
-				placeholder="Enter city"
+				placeholder="Enter city..."
 				value={city}
 				onChange={e => setCity(e.target.value)}
 				className="input-field"
@@ -41,6 +41,13 @@ const Weather = () => {
 						Weather: {weatherData.weather[0].description}
 					</p>
 				</div>
+			)}
+
+			{!weatherData && (
+				<p className="weather-description">
+					{" "}
+					No data. Kindly enter city in the input{" "}
+				</p>
 			)}
 		</div>
 	)
