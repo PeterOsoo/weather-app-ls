@@ -1,5 +1,8 @@
+import Weather from "./components/Weather"
+import "./App.css"
+
 const App = () => {
-	return <div>Weather App</div>
+	return <Weather />
 }
 
 export default App
